@@ -1,0 +1,39 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Tests and coverage
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Virtual environments and build outputs
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Local overrides and secrets (track config.toml)
+config.local.toml
+secrets.toml
+.env
+.env.*
+!.env.example
+
+# Logs, editors and operating-system files
+*.log
+*.pid
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

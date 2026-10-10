@@ -1,0 +1,18 @@
+[Unit]
+Description=Maintain IPv4 routes through ocserv VPN peers
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/vpn-route-manager.py --config /etc/vpn-route-manager/config.toml
+Restart=on-failure
+RestartSec=5s
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN
+AmbientCapabilities=CAP_NET_ADMIN
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

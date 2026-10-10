@@ -1,0 +1,12 @@
+[settings]
+interface_pattern = "vpns[0-9]+"
+resync_seconds = 60
+route_protocol = 240
+
+[[routes]]
+destination = "192.168.1.0/24"
+via = "10.60.20.172"
+
+[[routes]]
+destination = "192.168.2.0/24"
+via = "10.60.20.145"
